@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+*:focus {
+	outline: none;
+}
+
+body {
+	background: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/IMD19XGUE1.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	font-size: 16px;
+	color: rgba(0,0,0,0.8);
+}
+
+.search-form {
+	position: relative;
+	top: 60px;
+	width: 80%;
+	height: 40%;
+	max-height: 800px;
+	min-height: 300px;
+	margin: 150px auto ;
+	max-width: 800px;
+	min-width: 300px;
+	background-color: rgba(255,255,255,0.65);
+	padding: 0 50px;
+}
+
+.title {
+	position: relative;
+	top: 50px;
+	text-align: center;
+	color: #1A237E;
+}
+
+.searchbox {
+	position: relative;
+	top: 60px;
+	width: 90%;
+	margin: 50px auto;
+	padding: 15px;
+	border: none;
+	background-color: rgba(255,255,255,0.65);
+	text-align: center;
+}
+
+.search {
+	font-size: inherit;
+	margin: 0 auto;
+	padding: 10px 78px 10px 130px;
+	border: none;
+	background-color: rgba(255,255,255);
+	width: 90%;
+	color: #3F51B5;
+}
+
+.dropdown {
+	font-size: inherit;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	display: block;
+	position: absolute;
+	left: 3%;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	background-color: #F06292;
+	color: rgba(0,0,0,0.54);
+/*	overflow: hidden;*/
+}
+
+.search-btn {
+	font-size: inherit;
+	position: absolute;
+	right: 3%;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	background-color: #F06292;
+	color: rgba(0,0,0,0.54);
+}
+
+.search-btn:hover, .dropdown:hover {
+	font-weight: 900;
+}
+
+.search:focus {
+	background-color: #3F51B5;
+	color: #FF80AB;
+}
+
+.search:focus ~ .search-btn {
+	font-weight: 900;
+}
+
+

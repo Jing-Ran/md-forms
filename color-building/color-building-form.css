@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+body {
+	font-size: 16px;
+}
+
+.frame {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.header {
+	width: 60%;
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+.color-bar {
+	margin: 20px auto;
+	width: 60%;
+	padding: 10px;
+}
+
+table {
+	width: 90%;
+	margin: 10px auto;
+	padding: 10px;
+	text-align: center;
+}
+
+tr, td {
+	padding: 15px;
+}
+
+td.left {
+	width: 35%;
+	font-weight: 700;
+
+}
+
+td.right {
+	text-align: left;
+	padding-left: 50px;
+}
+
+td.red {
+	color: red;
+}
+
+td.green {
+	color: green;
+}
+
+td.blue {
+	color: blue;
+}
+
+table span.sm-text {
+	color: grey;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 0.8em;
+	vertical-align: middle;
+}
+
+input[type="range"] {
+	width: 70%;
+}
+
+input[type="submit"] {
+	width: 50%;
+	padding: 5px;
+	border: 2px solid #e7e7e7;
+	background-color: white;
+	font-size: 0.9em;
+}
+
+input[type="submit"]:hover {
+	background-color: #e7e7e7;
+}
+
+textarea {
+	resize: none;
+	width: 50%;
+	font-size: 0.9em;
+}
+
+input[type="submit"]:focus, textarea:focus {
+	outline: none;
+}
+
+
+
+
+
+
+

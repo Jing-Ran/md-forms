@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Color Building Form</title>
+	<link rel="stylesheet" type="text/css" href="color-building-form.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="frame">
+		<div class="header">
+			<img src="http://athome.kimvallee.com/wp-content/uploads/2012/01/MiddleHumidifier__Colours_010912.jpg" alt="colors">
+		</div>
+
+		<h1>Build Your Own Colors</h1>
+		
+		<div class="color-bar">
+			<form method="post">
+				<table>
+					<tr>
+						<td class="left red">RED</td>
+						<td class="right"><span class="sm-text">0 </span><input type="range" name="red-color" min="0" max="255" step="5" value="0"><span class="sm-text"> 255</span></td>
+					</tr>
+
+					<tr>
+						<td class="left green">GREEN</td>
+						<td class="right"><span class="sm-text">0 </span><input type="range" name="green-color" min="0" max="255" step="5" value="0"><span class="sm-text"> 255</span></td>
+					</tr>
+
+					<tr>
+						<td class="left blue">BLUE</td>
+						<td class="right"><span class="sm-text">0 </span><input type="range" name="blue-color" min="0" max="255" step="5" value="0"><span class="sm-text"> 255</span></td>
+					</tr>
+
+					<tr>
+						<td class="left transparency">TRANSPARENCY</td>
+						<td class="right"><span class="sm-text">0 </span><input type="range" name="transparency-color" min="0" max="1" step="0.01" value="0"><span class="sm-text"> 1</span></td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><input type="submit" name="submit" value="Check out your color"></td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><textarea name="color-built">Your color</textarea></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

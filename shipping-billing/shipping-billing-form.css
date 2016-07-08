@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.header {
+	position: absolute;
+	width: 100%;
+	top: 10px;
+}
+
+table {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+}
+
+.step-bar {
+	width: 25px;
+	height: 25px;
+	margin: 0 auto;
+	border-radius: 100%;
+	background-color: rgb(224,80,56);
+	line-height: 25px;
+	vertical-align: middle;
+	font-size: 1.3em;
+	color: white;
+}
+
+.steps {
+	width: 10%;
+	font-size: 0.8em;
+	font-family: 'Raleway', sans-serif;
+}
+
+.line {
+	width: 100px;
+	height: 1px;
+	background-color: rgb(224,80,56);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.previous {
+	opacity: 0.4;
+}
+
+.next {
+	background-color: rgba(0,0,0,0.3);
+}
+
+.next-tx {
+	color: rgba(0,0,0,0.4);
+}
+
+form {
+	width: 40%;
+	margin: 80px auto 80px;
+	padding: 30px;
+	font-family: 'Raleway', sans-serif;
+}
+
+fieldset {
+	padding: 20px;
+	margin: 0 auto 40px;
+	border: 1px solid rgba(0,0,0,0.3);
+}
+
+legend {
+	font-size: 1.2em;
+	color: rgba(0,0,0,0.6);
+}
+
+label {
+	float: left;
+	width: 30%;
+	height: 16px;
+	line-height: 16px;
+	margin-left: 15px;
+	padding: 5px;
+}
+
+select {
+	margin-bottom: 10px;
+	width: 50%;
+	height: 25px;
+	border: none;
+	background-color: #f0f0f0;
+	padding: 5px;
+	transition: background 2s;
+}
+
+input {
+	margin-bottom: 10px;
+	padding: 5px;
+	border: none;
+	background-color: #f0f0f0;
+	transition: background 2s;
+}
+
+input:focus, select:focus {
+	outline: none;
+	background-color: #FFCCBC;
+	border: none;
+}
+
+fieldset input {
+	width: 50%;
+	height: 25px;
+}
+
+input[type="checkbox"] ~ div.shipping {
+	display: block;
+}
+
+input[type="checkbox"]:checked ~ div.shipping {
+	display: none;
+}
+
+input[type="submit"] {
+	display: block;
+	float: right;
+	width: 20%;
+	height: 40px;
+	line-height: 25px;
+	margin-top: 20px;
+	border: 1px solid #FF8A65;
+	background-color: #FF8A65;
+	color: white;
+	font-size: 1em;
+	transition: background-color 2s;
+}
+
+input[type="submit"]:hover {
+	border: 1px solid rgba(224,80,56);
+	background-color: rgb(224,80,56);
+}
+
+
+
+
+
+
+

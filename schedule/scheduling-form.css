@@ -1,0 +1,188 @@
+* {
+	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	margin: 0 auto 30px;
+}
+
+.header {
+	position: absolute;
+	width: 100%;
+	height: 65px;
+	top: 0;
+	background-color: #3b3a36;
+}
+
+h1 {
+	margin-top: 22px;
+	margin-bottom: 22px;
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
+	font-weight: 200;
+}
+
+.main {
+	position: relative;
+	top: 150px;
+	right: 10%;
+	left: 10%;
+	height: 400px;
+	width: 80%;
+}
+
+form {
+	padding: 15px;
+	color: #7d4627;
+}
+
+fieldset {
+	border: none;
+	border-top: 2px solid rgba(125,70,39,0.5);
+	margin: 0 auto 20px;
+	padding: 35px 15px 15px 15px;
+}
+
+.left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 45%;
+}
+
+.right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 45%;
+}
+
+legend {
+	text-transform: uppercase;
+	padding: 3px;
+	font-size: 1.1em;
+	font-weight: bolder;
+}
+
+label {
+	width: 25%;
+	line-height: 14px;
+	vertical-align: middle;
+	padding: 5px;
+	float: left;
+	text-align: right;
+	margin: auto 5px auto 0;
+	font-size: inherit;
+}
+
+input {
+	margin: 0 auto 15px 5px;
+	padding: 5px;
+	width: 50%;
+	border: 1px solid rgba(0,0,0,0.2);
+	color: #7d4627;
+	vertical-align: middle;
+	cursor: pointer;
+	font-size: inherit;
+}
+
+fieldset input {
+	padding-left: 25px;
+	line-height: 14px;
+	background-size: 12px 12px;
+	background-position: 5px center;
+	background-repeat: no-repeat;
+}
+
+select {
+	margin: 1px auto 5px 5px;
+	border: 1px solid rgba(0,0,0,0.2);
+	height: 27px;
+	width: 60%;
+	color: #7d4627;
+	background-color: white;
+	cursor: pointer;
+	font-size: inherit;
+}
+
+textarea {
+	margin: 0 auto 5px 5px;
+	padding: 5px;
+	resize: none;
+	width: 60%;
+	height: 80px;
+	border: 1px solid rgba(0,0,0,0.2);
+	color: #7d4627;
+	cursor: pointer;
+	font-size: inherit;
+}
+
+.date {
+	background-image: url("http://www.iconsdb.com/icons/preview/icon-sets/grey-wall/calendar-7-xxl.png");
+}
+
+.time {
+	background-image: url("http://www.iconsdb.com/icons/preview/gray/clock-3-xl.png");
+}
+
+.fulln {
+	background-image: url("http://icons.iconarchive.com/icons/custom-icon-design/silky-line-user/512/user-2-icon.png");
+}
+
+.phone {
+	background-image: url("http://www.muslimqurbani.com/wp-content/uploads/2015/05/Icon-Phone-Light-Grey.png");
+}
+
+.email {
+	background-image: url("http://zt-static.zackstrade.net/zt/images/content/zt-topReasons-3dollar_contact-icon-email_lightGrey_60x60a2x.png");
+}
+
+input:focus, select:focus, textarea:focus {
+	outline: none;
+	box-shadow: 2px 2px 20px 3px #D7CCC8;
+}
+
+.btn {
+	position: absolute;
+/*	width: 25%;*/
+	bottom: 15px; 
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+input[type="submit"] {
+	background-color: #B2EBF2;
+	border: 1px solid #B2EBF2;
+	border-radius: 5px;
+	font-size: 0.9em;
+	color: #3E2723;
+	width: 100px;
+	height: 45px;
+}
+
+input[type="submit"]:hover {
+	border-radius: 5px;
+	background-image: url("https://cdn2.iconfinder.com/data/icons/svg-business-icons/512/Date_and_time-512.png");
+	background-size: 17px 17px;
+	background-position: 5px;
+	background-repeat: no-repeat;
+	text-align: right;
+}
+
+input[type="submit"]:active {
+	background-color: #80DEEA;
+	box-shadow: 2px 2px 20px 3px #B2EBF2;
+}
+
+
+
+
+
+

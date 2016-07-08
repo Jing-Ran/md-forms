@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Signup Form</title>
+	<link rel="stylesheet" type="text/css" href="signup-form.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="frame">
+		<div class="intro">
+			<h2 class="bold">Sign Up</h2>
+			<p>Sign up now and make sure you're the first to know the trending news!</p>
+		</div>
+		<hr>
+		
+		<form method="post">
+			<div class="form-body left-form">
+				<div class="question">
+					<label for="fname">First Name</label><br>
+					<input id="fname" class="full-width" type="text" name="firstnm" required>
+				</div>
+
+				<div class="question">
+					<label for="dob">Date of Birth</label><br>
+					<select id="dob" class="inline-b" name="months">
+						<option value="" disabled selected>mm</option>
+						<option value="jan">01</option>
+						<option value="feb">02</option>
+						<option value="mar">03</option>
+						<option value="apr">04</option>
+						<option value="may">05</option>
+						<option value="jun">06</option>
+						<option value="jul">07</option>
+						<option value="aug">08</option>
+						<option value="sep">09</option>
+						<option value="oct">10</option>
+						<option value="nov">11</option>
+						<option value="dec">12</option>
+					</select>
+					<input class="short-text inline-b" type="text" name="day" placeholder="dd">
+					<input class="short-text inline-b" type="text" name="year" placeholder="yyyy">
+				</div>
+
+				<div class="question">
+					<label for="email">Email Address</label><br>
+					<input id="email" class="full-width" type="email" name="email" required>
+				</div>
+			</div>
+
+			<div class="form-body right-form">
+				<div class="question">
+					<label for="lname">Last Name</label><br>
+					<input id="lname" class="full-width" type="text" name="lastnm" required>
+				</div>
+
+				<div class="question">
+					<label>Gender</label><br>
+					<input class="inline-b" id="female" type="radio" name="gender">
+					<label class="inline-b" for="female"> Female</label>&nbsp;
+					<input class="inline-b" id="male" type="radio" name="gender">
+					<label class="inline-b" for="male"> Male</label>&nbsp;
+					<input class="inline-b" id="other" type="radio" name="gender">
+					<label class="inline-b" for="other"> Other</label>
+				</div>
+				
+				<div class="question">
+					<label for="psw">Password</label><br>
+					<input id="psw" class="full-width" type="password" name="pw">
+				</div>
+			</div>
+			
+			<div class="submit-btn">
+				<input type="submit" name="submit" value="Sign Up">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

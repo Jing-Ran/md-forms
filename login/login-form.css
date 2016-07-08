@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+body {
+	font-size: 16px;
+	line-height: 20px;
+	background-color: #c0dfd9;
+	color: #5e0231;
+}
+
+.frame {
+	width: 40%;
+	margin: 50px auto;
+	padding: 20px 0;
+	border-radius: 40px;
+	background-color: white;
+}
+
+a {
+	text-decoration: none;
+	color: #5e0231;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 20px;
+	padding: 5px;
+}
+
+.header h2 {
+	font-size: 2em;
+}
+
+.form {
+	width: 60%;
+	margin: 0 auto 20px;
+	padding: 0 5px;
+}
+
+.form-bd {
+	margin: 0 auto 15px;
+	text-align: center;
+}
+
+.form-bd input {
+	width: 100%;
+	padding: 5px 10px 5px 40px;
+	border-radius: 60px;
+	border: 2px solid #c0dfd9;
+	color: #5e0231;
+	background-size: 15px 15px;
+	background-position: 15px center;
+	background-repeat: no-repeat;
+	font-size: inherit;
+}
+
+input:focus {
+	background-color: #c0dfd9;
+	outline: none;
+}
+
+.form-bd input[type="text"] {
+	background-image: url("http://icons.iconarchive.com/icons/custom-icon-design/silky-line-user/512/user-2-icon.png");
+}
+
+.form-bd input[type="password"] {
+	background-image: url("http://s3.amazonaws.com/libapps/sites/1773/icons/6373/140576_LibGuides-icons_Available_Restricted_access.png");
+}
+
+.form-bd input[type="email"] {
+	background-image: url("http://s3.amazonaws.com/libapps/sites/1773/icons/6373/140576_LibGuides-icons_Available_Restricted_access.png");
+}
+
+.float-rt a {
+	float: right;
+	width: 50%;
+	font-size: 0.8em;
+	color: rgba(0,0,0,0.6);
+	text-align: right;
+	margin-bottom: 15px;
+}
+
+.float-rt a:hover {
+	color: rgb(0,0,0);
+}
+
+.register p {
+	font-size: 0.9em;
+	text-align: center;
+	padding: 5px;
+}
+
+.btn {
+	display: block;
+	clear: right;
+	margin: 20px auto;
+	padding: 5px 15px;
+	border-radius: 60px;
+	border: 2px solid #c0dfd9;
+	background-color: #c0dfd9;
+	color: #5e0231;
+	font-size: inherit;
+}
+
+.btn:hover {
+	background-color: white;
+}
+
+.btn:active {
+	background-color: #c0dfd9;
+	border-style: inset none none inset;
+	border-color: #B2DFDB;
+}
+
+
+
+
+

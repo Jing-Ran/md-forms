@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scheduling Form</title>
+	<link rel="stylesheet" type="text/css" href="scheduling-form.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="header">
+		<h1>Schedule an Appointment</h1>
+	</div>
+
+	<div class="main">
+		<form method="post">
+			<div  class="left">
+				<fieldset name="appt-time">
+					<legend> Choose a time </legend>
+
+					<label for="date">Date </label>
+					<input id="date" class="date" type="date" name="date" required><br>
+
+					<label for="start-tm">From </label>
+					<input id="start-tm" class="time" type="time" name="start-tm" required><br>
+					
+					<label for="end-tm">To </label>
+					<input id="end-tm" class="time" type="time" name="end-tm" required><br>
+
+					<label for="tz">Timezone </label>
+					<select id="tz" name="timezone" required>
+						<option value="" disabled selected>- Please select a time zone -</option>
+						<option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
+			      <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
+			      <option value="-10.0">(GMT -10:00) Hawaii</option>
+			      <option value="-9.0">(GMT -9:00) Alaska</option>
+			      <option value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+			      <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+			      <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada)</option>
+			      <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada)</option>
+			      <option value="-4.0">(GMT -4:00) Atlantic Time</option>
+			      <option value="-3.5">(GMT -3:30) Newfoundland</option>
+			      <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+			      <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
+			      <option value="-1.0">(GMT -1:00) Azores, Cape Verde Islands</option>
+			      <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+			      <option value="1.0">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
+			      <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
+			      <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+			      <option value="3.5">(GMT +3:30) Tehran</option>
+			      <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+			      <option value="4.5">(GMT +4:30) Kabul</option>
+			      <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+			      <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+			      <option value="5.75">(GMT +5:45) Kathmandu</option>
+			      <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+			      <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+			      <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+			      <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+			      <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
+			      <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+			      <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+			      <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+					</select>
+				</fieldset>
+			</div>	
+
+			<div class="right">
+				<fieldset name="appt-info">
+					<legend> Details </legend>
+
+					<label for="fname">Full Name </label>
+					<input id="fname" class="fulln" type="text" name="fname" required><br>
+
+					<label for="contact">Contact </label>
+					<input id="contact" class="phone" type="tel" name="phone"><br>
+
+					<label for="email">Email </label>
+					<input id="email" class="email" type="email" name="email"><br>
+
+					<label for="message">Leave a Message</label>
+					<textarea id="message" name="message"></textarea>
+				</fieldset>
+			</div>
+
+			<div class="btn">
+				<input type="submit" name="submit" value="schedule">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

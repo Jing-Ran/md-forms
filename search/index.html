@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search Form</title>
+	<link rel="stylesheet" type="text/css" href="search-form.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<form method="get" name="search-form" class="search-form">
+		<h1 class="title">Tell me where are you heading to</h1>
+
+		<fieldset name="searchbox" class="searchbox">
+			<select class="dropdown" name="dropdown">
+				<option value="" disabled selected>-Category-</option>
+				<option value="asia">Asia</option>
+				<option value="africa">Africa</option>
+				<option value="north-america">North America</option>
+				<option value="south-america">South America</option>
+				<option value="antarctica">Antarctica</option>
+				<option value="europe">Europe</option>
+				<option value="australia">Australia</option>
+			</select>
+
+			<input class="search" type="text" name="search" placeholder="Where to next?" required>
+
+			<input class="search-btn" type="submit" name="search-btn" value="SEARCH">
+		</fieldset>
+	</form>
+</body>
+</html>

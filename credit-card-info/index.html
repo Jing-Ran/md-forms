@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Payment Form</title>
+	<link rel="stylesheet" type="text/css" href="../shipping-billing/shipping-billing-form.css">
+	<link rel="stylesheet" type="text/css" href="card-info-form.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="header">
+		<table>
+			<tr>
+				<td><div class="step-bar previous">1</div></td>
+				<td><div class="line previous"></div></td>
+				<td><div class="step-bar previous ">2</div></td>
+				<td><div class="line previous"></div></td>
+				<td><div class="step-bar">3</div></td>
+				<td><div class="line next"></div></td>
+				<td><div class="step-bar next">4</div></td>
+			</tr>
+
+			<tr>
+				<td class="steps previous-tx">Shopping</td>
+				<td></td>
+				<td class="steps previous-tx">Address</td>
+				<td></td>
+				<td class="steps">Payment</td>
+				<td></td>
+				<td class="steps next-tx">Confirm</td>
+			</tr>
+		</table>
+	</div>
+
+	<form method="post">
+		<div class="payment">
+			<fieldset name="payment">
+				<legend>Payment Information</legend>
+				<label for="holder">Cardholder's Name: </label>
+				<input id="holder" type="text" name="holdernm" required><br>
+
+				<label for="card-type">Card Type: </label>
+				<select id="card-type" name="card-tp" required>
+					<option value="" disabled selected>- Select -</option>
+					<option value="visa">Visa</option>
+					<option value="master">MasterCard</option>
+					<option value="amex">American Express</option>
+					<option value="discover">Discover</option>
+				</select>
+				<img class="cards" src="https://irp-cdn.multiscreensite.com/777e30de/dms3rep/multi/tablet/VISA-MasterCard-American-Express-and-Discover-credit-Cards_1mKNqQCSeaNEfKGle5yV-1000x177.png" alt="card types"><br>
+
+				<label for="card-no">Card Number: </label>
+				<input id="card-no" type="text" name="card-no" pattern=".{16}|.{19}" required><br>
+
+				<label for="cvs">CVS Code: </label>
+				<input id="cvs" type="text" name="cvs" pattern=".{3}|.{4}" required>
+				<a class="cvs">What is this?</a><br>
+				<div class="cvs-code">
+					<img src="https://www.joycemeyer.org/Assets/images/checkout/cvvImage.jpg" alt="cvs code">
+				</div>
+
+				<label>Expiration Date: </label>
+				<select class="expiration" name="exp-m" required>
+					<option value="" disabled selected>- Month -</option>
+					<option value="jan">01</option>
+					<option value="feb">02</option>
+					<option value="mar">03</option>
+					<option value="apr">04</option>
+					<option value="may">05</option>
+					<option value="jun">06</option>
+					<option value="jul">07</option>
+					<option value="aug">08</option>
+					<option value="sep">09</option>
+					<option value="oct">10</option>
+					<option value="nov">11</option>
+					<option value="dec">12</option>
+				</select> / 
+				<select class="expiration" name="exp-y" required>
+					<option value="" disabled selected>- Year -</option>
+					<option value="2016">16</option>
+					<option value="2017">17</option>
+					<option value="2018">18</option>
+					<option value="2019">19</option>
+					<option value="2020">20</option>
+					<option value="2021">21</option>
+					<option value="2022">22</option>
+					<option value="2023">23</option>
+					<option value="2024">24</option>
+					<option value="2025">25</option>
+					<option value="2026">26</option>
+					<option value="2027">27</option>
+					<option value="2028">28</option>
+					<option value="2029">29</option>
+					<option value="2030">30</option>
+				</select>
+			</fieldset>
+		</div>
+
+		<input type="submit" name="submit" value="Next Step">
+	</form>
+	
+	
+
+</body>
+</html>
