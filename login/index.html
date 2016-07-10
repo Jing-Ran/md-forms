@@ -13,13 +13,13 @@
 		</div>
 	
 		<div class="form">
-			<form method="post">
+			<form method="post" id="login-form">
 				<div class="form-bd">
-					<input type="text" name="usernm" placeholder="username/email" required>
+					<input id="email-login" type="email" name="email" placeholder="email address">
 				</div>
 	
 				<div class="form-bd">
-					<input type="password" name="pw" placeholder="password" required>
+					<input id="psw-login" type="password" name="pw" placeholder="password">
 				</div>
 	
 				<div class="float-rt">
@@ -33,10 +33,11 @@
 
 			<div class="register">
 				<p>Don't have an account? Sign up now!</p>
-				<button class="btn"><a href="signup-form.html" target="_blank">Sign up</button>
+				<button class="btn"><a href="../signup/index.html" target="_blank">Sign up</button>
 			</div>
 
 		</div>
 	</div>
+	<script src="script.js"></script>
 </body>
 </html>
