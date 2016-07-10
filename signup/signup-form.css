@@ -61,7 +61,7 @@ form {
 
 .form-body input, select {
 	padding: 5px 15px;
-	border: 1px solid #98dafc;
+	border: 1px solid #9ad3de;
 	color: #795548;
 }
 
@@ -93,19 +93,19 @@ select {
 }
 
 ::-webkit-input-placeholder {
-   color: #795548;
+	color: rgba(121,85,72,0.6);
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #795548;  
+	color: rgba(121,85,72,0.6);
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #795548;  
+	color: rgba(121,85,72,0.6);
 }
 
-:-ms-input-placeholder {  
-   color: #795548;  
+:-ms-input-placeholder {
+	color: rgba(121,85,72,0.6);
 }
 
 .submit-btn {
@@ -129,9 +129,28 @@ input[type="submit"]:hover {
 
 input[type="submit"]:active {
 	background-color: #9ad3de;
-	border-style: inset none none inset;
-	border-color: #80DEEA;
+	font-weight: bolder;
 }
+
+input.invalid {
+	border-color: red;
+	background-color: white;
+}
+
+input.invalid:focus {
+	background-color: #9ad3de;
+}
+
+input[type="radio"].rdInvalid {
+	outline: 1px solid red;
+}
+
+label.required::after {
+	content: " *";
+	color: red;
+	font-size: inherit;
+}
+
 
 
 
