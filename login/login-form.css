@@ -61,15 +61,12 @@ input:focus {
 	outline: none;
 }
 
-.form-bd input[type="text"] {
+#email-login {
 	background-image: url("http://icons.iconarchive.com/icons/custom-icon-design/silky-line-user/512/user-2-icon.png");
 }
 
-.form-bd input[type="password"] {
-	background-image: url("http://s3.amazonaws.com/libapps/sites/1773/icons/6373/140576_LibGuides-icons_Available_Restricted_access.png");
-}
-
-.form-bd input[type="email"] {
+#psw-login,
+#email-forgot {
 	background-image: url("http://s3.amazonaws.com/libapps/sites/1773/icons/6373/140576_LibGuides-icons_Available_Restricted_access.png");
 }
 
@@ -110,8 +107,16 @@ input:focus {
 
 .btn:active {
 	background-color: #c0dfd9;
-	border-style: inset none none inset;
-	border-color: #B2DFDB;
+	font-weight: bolder;
+}
+
+input.invalid {
+	border-color: red;
+	background-color: white;
+}
+
+input.invalid:focus {
+	background-color: #c0dfd9;
 }
 
 
