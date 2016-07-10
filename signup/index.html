@@ -14,59 +14,44 @@
 		</div>
 		<hr>
 		
-		<form method="post">
+		<form method="post" id="signup">
 			<div class="form-body left-form">
 				<div class="question">
-					<label for="fname">First Name</label><br>
-					<input id="fname" class="full-width" type="text" name="firstnm" required>
+					<label for="fname" class="required">First Name</label><br>
+					<input id="fname" class="full-width" type="text" name="firstnm">
 				</div>
 
 				<div class="question">
-					<label for="dob">Date of Birth</label><br>
-					<select id="dob" class="inline-b" name="months">
-						<option value="" disabled selected>mm</option>
-						<option value="jan">01</option>
-						<option value="feb">02</option>
-						<option value="mar">03</option>
-						<option value="apr">04</option>
-						<option value="may">05</option>
-						<option value="jun">06</option>
-						<option value="jul">07</option>
-						<option value="aug">08</option>
-						<option value="sep">09</option>
-						<option value="oct">10</option>
-						<option value="nov">11</option>
-						<option value="dec">12</option>
-					</select>
-					<input class="short-text inline-b" type="text" name="day" placeholder="dd">
-					<input class="short-text inline-b" type="text" name="year" placeholder="yyyy">
+					<label for="dob" class="required">Date of Birth</label><br>
+					<input id="dob" class="full-width" type="text" name="dob" placeholder="mm/dd/yyyy">
 				</div>
 
 				<div class="question">
-					<label for="email">Email Address</label><br>
-					<input id="email" class="full-width" type="email" name="email" required>
+					<label for="email" class="required">Email Address</label><br>
+					<input id="email" class="full-width" type="email" name="email">
 				</div>
 			</div>
 
 			<div class="form-body right-form">
 				<div class="question">
-					<label for="lname">Last Name</label><br>
-					<input id="lname" class="full-width" type="text" name="lastnm" required>
+					<label for="lname" class="required">Last Name</label><br>
+					<input id="lname" class="full-width" type="text" name="lastnm">
 				</div>
 
 				<div class="question">
-					<label>Gender</label><br>
-					<input class="inline-b" id="female" type="radio" name="gender">
-					<label class="inline-b" for="female"> Female</label>&nbsp;
-					<input class="inline-b" id="male" type="radio" name="gender">
-					<label class="inline-b" for="male"> Male</label>&nbsp;
-					<input class="inline-b" id="other" type="radio" name="gender">
-					<label class="inline-b" for="other"> Other</label>
+					<label class="required">Gender</label><br>
+					<input class="gender" id="female" type="radio" name="gender">
+					<label for="female"> female</label>&nbsp;&nbsp;
+					<input class="gender" id="male" type="radio" name="gender">
+					<label for="male"> male</label>&nbsp;&nbsp;
+					<input class="gender" id="other" type="radio" name="gender">
+					<label for="other"> other</label>
 				</div>
 				
 				<div class="question">
-					<label for="psw">Password</label><br>
-					<input id="psw" class="full-width" type="password" name="pw">
+					<label for="psw" class="required">Password</label><br>
+					<input id="psw" class="full-width" type="password" name="psw"
+					placeholder="6-8 characters">
 				</div>
 			</div>
 			
@@ -75,5 +60,7 @@
 			</div>
 		</form>
 	</div>
+
+	<script src="script.js"></script>
 </body>
 </html>
