@@ -160,9 +160,9 @@
                 genderRadioBtns[i].classList.add("rdInvalid");
             }
         } else {
-            for (var i = 0; i < genderRadioBtns.length; i++) {
-                genderRadioBtns[i].classList.remove("rdInvalid");
-                genderRadioBtns[i].classList.add("rdValid");
+            for (var j = 0; j < genderRadioBtns.length; j++) {
+                genderRadioBtns[j].classList.remove("rdInvalid");
+                genderRadioBtns[j].classList.add("rdValid");
             }
         }
 
