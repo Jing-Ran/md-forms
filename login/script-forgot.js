@@ -44,7 +44,6 @@
             emailForgot.classList.add("invalid");
         } else {
             emailForgot.classList.remove("invalid");
-            emailForgot.classList.add("valid");
         }
     });
 })();

@@ -53,14 +53,12 @@
             emailInput.classList.add("invalid");
         } else {
             emailInput.classList.remove("invalid");
-            emailInput.classList.add("valid");
         }
 
         if (!validator.isPassword(pswInput.value)) {
             pswInput.classList.add("invalid");
         } else {
             pswInput.classList.remove("invalid");
-            pswInput.classList.add("valid");
         }
     });
 
