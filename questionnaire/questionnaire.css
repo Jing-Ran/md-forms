@@ -50,6 +50,7 @@ form, h1 {
 	color: #30231d;
 	padding: 5px;
 	font-size: inherit;
+	border: 1px solid lightgrey;
 }
 
 .submit-bn {
@@ -81,6 +82,16 @@ form, h1 {
 
 input[type="submit"]:focus, input[type="text"]:focus {
 	outline: none;
+}
+
+h1.invalid::after {
+	content: " REQUIRED";
+	color: red;
+	font-size: 0.4em;
+}
+
+input[type="text"].invalid {
+	border-color: red;
 }
 
 
