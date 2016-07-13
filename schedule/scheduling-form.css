@@ -27,14 +27,23 @@ h1 {
 
 .main {
 	position: relative;
-	top: 150px;
+	top: 80px;
 	right: 10%;
 	left: 10%;
 	height: 400px;
 	width: 80%;
 }
 
+p#invalidSchedule {
+	margin-top: 30px;
+	color: red;
+	text-align: center;
+	opacity: 0;
+}
+
 form {
+	position: relative;
+	top: 15px;
 	padding: 15px;
 	color: #7d4627;
 }
@@ -148,7 +157,7 @@ input:focus, select:focus, textarea:focus {
 .btn {
 	position: absolute;
 /*	width: 25%;*/
-	bottom: 15px; 
+	top: 350px;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -166,7 +175,9 @@ input[type="submit"] {
 	width: 100px;
 	height: 45px;
 }
-
+input[type="submit"]:focus {
+	box-shadow: none;
+}
 input[type="submit"]:hover {
 	border-radius: 5px;
 	background-image: url("https://cdn2.iconfinder.com/data/icons/svg-business-icons/512/Date_and_time-512.png");
@@ -178,11 +189,38 @@ input[type="submit"]:hover {
 
 input[type="submit"]:active {
 	background-color: #80DEEA;
-	box-shadow: 2px 2px 20px 3px #B2EBF2;
 }
 
+::-webkit-input-placeholder {
+	font-size: 0.9em;
+}
 
+:-moz-placeholder { /* Firefox 18- */
+	font-size: 0.9em;
+}
 
+::-moz-placeholder {  /* Firefox 19+ */
+	font-size: 0.9em;
+}
 
+:-ms-input-placeholder {
+	font-size: 0.9em;
+}
 
+label.required::before {
+	content: '* ';
+	color: red;
+}
+
+input.invalid {
+	border: 1px solid red;
+}
+
+select.invalid {
+	border: 1px solid red;
+}
+
+textarea.invalid {
+	border: 1px solid red;
+}
 
