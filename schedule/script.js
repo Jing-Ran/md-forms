@@ -79,7 +79,7 @@
         return true;
     }
 
-    // Name validation
+    // Full name validation
     validator.isName = function(name) {
         var nameArr;
         if (validator.isTrimmed(name)) {
