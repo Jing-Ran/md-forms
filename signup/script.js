@@ -137,22 +137,19 @@
         if (!validator.isName(firstName.value)) {
             firstName.classList.add("invalid");
         } else {
-            firstName.classList.remove("invalid");
-            firstName.classList.add("valid");
+            firstName.classList.remove("invalid");\
         }
 
         if (!validator.isName(lastName.value)) {
             lastName.classList.add("invalid");
         } else {
             lastName.classList.remove("invalid");
-            lastName.classList.add("valid");
         }
 
         if (!validator.isDOB(dob.value)) {
             dob.classList.add("invalid");
         } else {
             dob.classList.remove("invalid");
-            dob.classList.add("valid");
         }
 
         if (!validator.isRadioChecked(genderRadioBtns)) {
@@ -162,7 +159,6 @@
         } else {
             for (var j = 0; j < genderRadioBtns.length; j++) {
                 genderRadioBtns[j].classList.remove("rdInvalid");
-                genderRadioBtns[j].classList.add("rdValid");
             }
         }
 
@@ -170,14 +166,12 @@
             emailAddress.classList.add("invalid");
         } else {
             emailAddress.classList.remove("invalid");
-            emailAddress.classList.add("valid");
         }
 
         if (!validator.isPassword(password.value)) {
             password.classList.add("invalid");
         } else {
             password.classList.remove("invalid");
-            password.classList.add("valid");
         }
     });
 })();
