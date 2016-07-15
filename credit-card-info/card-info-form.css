@@ -1,4 +1,8 @@
-.payment input, select {
+form {
+	width: 50%;
+}
+
+fieldset input, select {
 	width: 40%;
 }
 
@@ -23,8 +27,8 @@ img.cards {
 div.cvs-code {
 	display: none;
 	position: absolute;
-	top: 20%;
-	right: 15%;
+	top: 18%;
+	right: 13%;
 	width: 15%;
 	height: 30%;
 }
@@ -34,5 +38,13 @@ div.cvs-code {
 }
 
 select.expiration {
-	width: 20%;
+	width: 15%;
+}
+
+input.invalid {
+	border-color: rgb(224,80,56);
+}
+
+select.invalid {
+	border-color: rgb(224,80,56);
 }
