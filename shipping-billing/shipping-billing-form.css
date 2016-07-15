@@ -81,40 +81,37 @@ label {
 	padding: 5px;
 }
 
-select {
+input, select {
+	height: 30px;
+	padding: 5px 10px;
 	margin-bottom: 10px;
-	width: 50%;
-	height: 25px;
-	border: none;
+	border: 1px solid #f0f0f0;
 	background-color: #f0f0f0;
-	padding: 5px;
-	transition: background 2s;
+	transition: 1s;
 }
 
-input {
-	margin-bottom: 10px;
-	padding: 5px;
-	border: none;
-	background-color: #f0f0f0;
-	transition: background 2s;
+select {
+	width: 50%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+}
+
+fieldset input {
+	width: 50%;
 }
 
 input:focus, select:focus {
 	outline: none;
 	background-color: #FFCCBC;
-	border: none;
+	border-color: #FFCCBC;
 }
 
-fieldset input {
-	width: 50%;
-	height: 25px;
-}
+/*input[type="checkbox"] ~ div.shipping {*/
+	/*display: block;*/
+/*}*/
 
-input[type="checkbox"] ~ div.shipping {
-	display: block;
-}
-
-input[type="checkbox"]:checked ~ div.shipping {
+input[type="checkbox"]:checked ~ div#shipping {
 	display: none;
 }
 
@@ -129,17 +126,25 @@ input[type="submit"] {
 	background-color: #FF8A65;
 	color: white;
 	font-size: 1em;
-	transition: background-color 2s;
+	transition: 1s;
 }
 
 input[type="submit"]:hover {
-	border: 1px solid rgba(224,80,56);
+	border: 1px solid rgb(224,80,56);
 	background-color: rgb(224,80,56);
 }
 
+.required::after {
+	content: " *";
+	color: rgb(224,80,56);
+	font-size: larger;
+}
 
+input.invalid {
+	border-color: rgb(224,80,56);
+}
 
-
-
-
+select.invalid {
+	border-color: rgb(224,80,56);
+}
 
