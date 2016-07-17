@@ -5,35 +5,41 @@
 
     // Email validation
     validator.isEmail = function(email) {
-        var beforeAt,
-            afterAt,
-            splitBeforeAt,
-            splitAfterAt;
+        var local,
+        domain,
+        localSplit,
+        domainSplit;
 
         if (!email) return false;
+        // Move space check from back to the front: no space is allowed in an email
+        if (email.indexOf(" ") !== -1) return false;
 
         if (email.indexOf("@") === -1 ||
             email.indexOf("@") !== email.lastIndexOf("@")) return false;
 
-        beforeAt = email.split("@")[0];
-        afterAt = email.split("@")[1];
-        splitBeforeAt = beforeAt.split(".");
-        splitAfterAt = afterAt.split(".");
+        local = email.split("@")[0];
+        domain = email.split("@")[1];
+        localSplit = local.split(".");
+        domainSplit = domain.split(".");
 
-        if (beforeAt === "" || beforeAt.indexOf(" ") >= 0) return false;
-        for (var i = 0; i < splitBeforeAt.length; i++) {
-            if (splitBeforeAt[i] === "" || splitBeforeAt[i] === " ")
+        if (beforeAt === "") return false;
+        for (var i = 0; i < beforeAtSplit.length; i++) {
+            if (beforeAtSplit[i] === "")
                 return false;
         }
-        if (afterAt === "" || afterAt.indexOf(" ") >=0) return false;
-        if (splitAfterAt.length < 2) return false;
-        for (var j = 0; j < splitAfterAt.length; j++) {
-            if (splitAfterAt[j] === "" || splitAfterAt[j] === " ")
-                return false;
-            if (splitAfterAt[splitAfterAt.length - 1].length < 2) return false;
-        }
 
-        return true;
+        if (domain === "") return false;
+        // Add: no underscore is allow after @ sign
+        if (domain.indexOf("_") !== -1) return false;
+        // Add: hyphen can't be the first or the last character
+        if (domain.indexOf("-") === 0 || 
+            domain.lastIndexOf("-") === domain.length - 1) return false;
+        // Remove checking length of domainSplit
+        // A domain without dot is allowed, ex. IP address
+        for (var j = 0; j < domainSplit.length; j++) {
+            if (domainSplit[j] === "") return false;
+            if (domainSplit[domainSplit.length - 1].length < 2) return false;
+        }
     };
 
 
