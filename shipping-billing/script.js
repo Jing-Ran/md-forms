@@ -81,9 +81,9 @@
     // Email validation
     validator.isEmail = function(email) {
         var local,
-        domain,
-        localSplit,
-        domainSplit;
+            domain,
+            localSplit,
+            domainSplit;
 
         if (!email) return false;
         if (email.indexOf(" ") !== -1) return false;
@@ -96,9 +96,9 @@
         localSplit = local.split(".");
         domainSplit = domain.split(".");
 
-        if (beforeAt === "") return false;
-        for (var i = 0; i < beforeAtSplit.length; i++) {
-            if (beforeAtSplit[i] === "")
+        if (local === "") return false;
+        for (var i = 0; i < localSplit.length; i++) {
+            if (localSplit[i] === "")
                 return false;
         }
 
@@ -110,7 +110,6 @@
             if (domainSplit[j] === "") return false;
             if (domainSplit[domainSplit.length - 1].length < 2) return false;
         }
-
         return true;
     };
 
