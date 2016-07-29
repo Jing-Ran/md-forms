@@ -14,28 +14,28 @@
 		</div>
 		<hr>
 		
-		<form method="post" id="signup">
+		<form method="post" id="signup" autocomplete="off">
 			<div class="form-body left-form">
 				<div class="question">
 					<label for="fname" class="required">First Name</label><br>
-					<input id="fname" class="full-width" type="text" name="firstnm">
+					<input id="fname" class="full-width" type="text" name="firstnm" required>
 				</div>
 
 				<div class="question">
 					<label for="dob" class="required">Date of Birth</label><br>
-					<input id="dob" class="full-width" type="text" name="dob" placeholder="mm/dd/yyyy">
+					<input id="dob" class="full-width" type="text" name="dob" placeholder="mm/dd/yyyy" required>
 				</div>
 
 				<div class="question">
 					<label for="email" class="required">Email Address</label><br>
-					<input id="email" class="full-width" type="email" name="email">
+					<input id="email" class="full-width" type="email" name="email" required>
 				</div>
 			</div>
 
 			<div class="form-body right-form">
 				<div class="question">
 					<label for="lname" class="required">Last Name</label><br>
-					<input id="lname" class="full-width" type="text" name="lastnm">
+					<input id="lname" class="full-width" type="text" name="lastnm" required>
 				</div>
 
 				<div class="question">
@@ -51,7 +51,7 @@
 				<div class="question">
 					<label for="psw" class="required">Password</label><br>
 					<input id="psw" class="full-width" type="password" name="psw"
-					placeholder="6-8 characters">
+					placeholder="6-8 characters" required>
 				</div>
 			</div>
 			

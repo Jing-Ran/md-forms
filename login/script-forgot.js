@@ -31,6 +31,7 @@
         if (domain.indexOf("_") !== -1) return false;
         if (domain.indexOf("-") === 0 || 
             domain.lastIndexOf("-") === domain.length - 1) return false;
+        if (domainSplit.length < 2) return false;
         for (var j = 0; j < domainSplit.length; j++) {
             if (domainSplit[j] === "") return false;
             if (domainSplit[domainSplit.length - 1].length < 2) return false;
@@ -38,14 +39,17 @@
         return true;
     };
 
+    emailForgot.addEventListener("keyup", function() {
+        if (!validator.isEmail(this.value)) {
+            this.setCustomValidity("Invalid email address");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
 
     forgotPswForm.addEventListener("submit", function(e) {
         e.preventDefault();
-
-        if (!validator.isEmail(emailForgot.value)) {
-            emailForgot.classList.add("invalid");
-        } else {
-            emailForgot.classList.remove("invalid");
-        }
     });
 })();

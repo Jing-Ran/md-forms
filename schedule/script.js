@@ -151,6 +151,7 @@
         if (domain.indexOf("_") !== -1) return false;
         if (domain.indexOf("-") === 0 || 
             domain.lastIndexOf("-") === domain.length - 1) return false;
+        if (domainSplit.length < 2) return false;
         for (var j = 0; j < domainSplit.length; j++) {
             if (domainSplit[j] === "") return false;
             if (domainSplit[domainSplit.length - 1].length < 2) return false;
@@ -161,20 +162,87 @@
 
 
 
+    dateInput.addEventListener("keyup", function() {
+        if (!validator.isDate(this.value)) {
+            this.setCustomValidity("Invalid date");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
+    startTime.addEventListener("keyup", function() {
+        if (!validator.isTime(this.value)) {
+            this.setCustomValidity("Invalid time input");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
+    endTime.addEventListener("keyup", function() {
+        if (!validator.isTime(this.value)) {
+            this.setCustomValidity("Invalid end time");
+            this.classList.add("invalid");
+        } else if (this.value <= startTime.value) {
+            this.setCustomValidity("End time should be later than start time");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
+    fullName.addEventListener("keyup", function() {
+        if (!validator.isName(this.value)) {
+            this.setCustomValidity("Invalid name input");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
+    emailAddress.addEventListener("keyup", function() {
+        if (!validator.isEmail(this.value)) {
+            this.setCustomValidity("Invalid email address");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
+    phoneNumber.addEventListener("keyup", function() {
+        if (this.value !== "") {
+            if (!validator.isPhoneNum(this.value)) {
+                this.setCustomValidity("Invalid phone number");
+                this.classList.add("invalid");
+            } else {
+                this.setCustomValidity("");
+                this.classList.remove("invalid");
+            }
+        }
+    });
+
+    message.addEventListener("keyup", function() {
+        if (message.value !== "") {
+            if (!validator.isTrimmed(this.value)) {
+                this.setCustomValidity("Invalid message input");
+                this.classList.add("invalid");
+            } else {
+                this.setCustomValidity("");
+                this.classList.remove("invalid");
+            }
+        }
+    });
+
+
     scheduleForm.addEventListener("submit", function(e) {
         e.preventDefault();
-
-        if (!validator.isDate(dateInput.value)) {
-            dateInput.classList.add("invalid");
-        } else {
-            dateInput.classList.remove("invalid");
-        }
-
-        if (!validator.isTime(startTime.value)) {
-            startTime.classList.add("invalid");
-        } else {
-            startTime.classList.remove("invalid");
-        }
+        console.log(startTime.value);
 
         if (!validator.isSelected(timezoneInput)) {
             timezoneBox.classList.add("invalid");
@@ -192,38 +260,5 @@
             invalidMessage.style.opacity = "0";
         }
 
-        if (!validator.isTime(endTime.value) || endTime.value <= startTime.value) {
-            endTime.classList.add("invalid");
-        } else {
-            endTime.classList.remove("invalid");
-        }
-
-        if (!validator.isName(fullName.value)) {
-            fullName.classList.add("invalid");
-        } else {
-            fullName.classList.remove("invalid");
-        }
-
-        if (phoneNumber.value !== "") {
-            if (!validator.isPhoneNum(phoneNumber.value)) {
-                phoneNumber.classList.add("invalid");
-            } else {
-                phoneNumber.classList.remove("invalid");
-            }
-        }
-
-        if (!validator.isEmail(emailAddress.value)) {
-            emailAddress.classList.add("invalid");
-        } else {
-            emailAddress.classList.remove("invalid");
-        }
-
-        if (message.value !== "") {
-            if (!validator.isTrimmed(message.value)) {
-                message.classList.add("invalid");
-            } else {
-                message.classList.remove("invalid");
-            }
-        }
     });
 })();

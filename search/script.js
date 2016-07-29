@@ -34,21 +34,22 @@
     };
 
 
+    textInput.addEventListener("keyup", function() {
+        if (!validator.isEmpty(this.value)) {
+            this.setCustomValidity("Invalid search content");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
 
     searchForm.addEventListener("submit", function(e) {
         e.preventDefault();
         if (!validator.isSelected(categories)) {
             categoryBox.classList.add("invalid");
-            // categoryBox.setCustomValidity("Please select a category.");
         } else {
             categoryBox.classList.remove("invalid");
-            // categoryBox.setCustomValidity("");
-        }
-
-        if (!validator.isEmpty(textInput.value)) {
-            textInput.classList.add("invalid");
-        } else {
-            textInput.classList.remove("invalid");
         }
     });
 

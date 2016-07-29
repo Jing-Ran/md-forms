@@ -81,13 +81,16 @@ label {
 	padding: 5px;
 }
 
-input, select {
-	height: 30px;
+input, select {	
 	padding: 5px 10px;
 	margin-bottom: 10px;
 	border: 1px solid #f0f0f0;
 	background-color: #f0f0f0;
 	transition: 1s;
+}
+
+fieldset input, select {
+	height: 30px;
 }
 
 select {

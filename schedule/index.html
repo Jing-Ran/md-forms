@@ -13,22 +13,22 @@
 
 	<div class="main">
 		<p id="invalidSchedule">Invalid appointment time: please choose a time after the current time.</p>
-		<form method="post" id="schedule-form">
+		<form method="post" id="schedule-form" autocomplete="off">
 			<div  class="left">
 				<fieldset name="appt-time">
 					<legend> Choose a time </legend>
 
 					<label for="date" class="required">Date </label>
-					<input id="date" class="date" type="date" name="date"><br>
+					<input id="date" class="date" type="date" name="date" placeholder="mm-dd-yyyy" required><br>
 
 					<label for="start-tm" class="required">From </label>
-					<input id="start-tm" class="time" type="time" name="start-tm"><br>
+					<input id="start-tm" class="time" type="time" name="start-tm" placeholder="hh:mm" required><br>
 					
 					<label for="end-tm" class="required">To </label>
-					<input id="end-tm" class="time" type="time" name="end-tm"><br>
+					<input id="end-tm" class="time" type="time" name="end-tm" placeholder="hh:mm" required><br>
 
 					<label for="tz" class="required">Timezone </label>
-					<select id="tz" name="timezone">
+					<select id="tz" name="timezone" required>
 						<option value="" disabled selected>- Please select a time zone -</option>
 						<option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
 						<option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
@@ -70,13 +70,13 @@
 					<legend> Details </legend>
 
 					<label for="fname" class="required">Full Name </label>
-					<input id="fname" class="fulln" type="text" name="fname"><br>
+					<input id="fname" class="fulln" type="text" name="fname" required><br>
 
 					<label for="contact">Contact </label>
 					<input id="contact" class="phone" type="tel" name="phone" placeholder="XXX-XXX-XXXX"><br>
 
 					<label for="email" class="required">Email </label>
-					<input id="email" class="email" type="email" name="email"><br>
+					<input id="email" class="email" type="email" name="email" required><br>
 
 					<label for="message">Leave a Message</label>
 					<textarea id="message" name="message"></textarea>

@@ -37,7 +37,7 @@
 			<fieldset name="payment">
 				<legend>Payment Information</legend>
 				<label for="holder">Cardholder's Name: </label>
-				<input id="holder" type="text" name="holdernm"><br>
+				<input id="holder" type="text" name="holdernm" required><br>
 
 				<label for="card-type">Card Type: </label>
 				<select id="card-type" name="card-tp">
@@ -50,10 +50,10 @@
 				<img class="cards" src="https://irp-cdn.multiscreensite.com/777e30de/dms3rep/multi/tablet/VISA-MasterCard-American-Express-and-Discover-credit-Cards_1mKNqQCSeaNEfKGle5yV-1000x177.png" alt="card types"><br>
 
 				<label for="card-no">Card Number: </label>
-				<input id="card-no" type="text" name="card-no" pattern=".{16}|.{19}"><br>
+				<input id="card-no" type="text" name="card-no" pattern=".{16}|.{19}" required><br>
 
 				<label for="cvs">CVS Code: </label>
-				<input id="cvs" type="text" name="cvs" pattern=".{3}|.{4}">
+				<input id="cvs" type="text" name="cvs" pattern=".{3}|.{4}" required>
 				<a class="cvs">What is cvs code?</a><br>
 				<div class="cvs-code">
 					<img src="https://www.joycemeyer.org/Assets/images/checkout/cvvImage.jpg" alt="cvs code">

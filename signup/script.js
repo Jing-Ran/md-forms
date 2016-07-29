@@ -117,6 +117,7 @@
         if (domain.indexOf("_") !== -1) return false;
         if (domain.indexOf("-") === 0 || 
             domain.lastIndexOf("-") === domain.length - 1) return false;
+        if (domainSplit.length < 2) return false;
         for (var j = 0; j < domainSplit.length; j++) {
             if (domainSplit[j] === "") return false;
             if (domainSplit[domainSplit.length - 1].length < 2) return false;
@@ -132,28 +133,61 @@
         if (password.length < 6 || password.length > 8) return false;
         return true;
     };
+    
+
+    firstName.addEventListener("keyup", function() {
+        if (!validator.isName(this.value)) {
+            this.setCustomValidity("Invalid name input");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
+    lastName.addEventListener("keyup", function() {
+        if (!validator.isName(this.value)) {
+            this.setCustomValidity("Invalid name input");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
+    dob.addEventListener("keyup", function() {
+        if (!validator.isDOB(this.value)) {
+            this.setCustomValidity("Invalid date of birth");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
+    emailAddress.addEventListener("keyup", function() {
+        if (!validator.isEmail(this.value)) {
+            this.setCustomValidity("Invalid email address");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
+    password.addEventListener("keyup", function() {
+        if (!validator.isPassword(this.value)) {
+            this.setCustomValidity("Invalid password");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
 
     
     signupForm.addEventListener("submit", function(e) {
         e.preventDefault();
-
-        if (!validator.isName(firstName.value)) {
-            firstName.classList.add("invalid");
-        } else {
-            firstName.classList.remove("invalid");\
-        }
-
-        if (!validator.isName(lastName.value)) {
-            lastName.classList.add("invalid");
-        } else {
-            lastName.classList.remove("invalid");
-        }
-
-        if (!validator.isDOB(dob.value)) {
-            dob.classList.add("invalid");
-        } else {
-            dob.classList.remove("invalid");
-        }
 
         if (!validator.isRadioChecked(genderRadioBtns)) {
             for (var i = 0; i < genderRadioBtns.length; i++) {
@@ -163,18 +197,6 @@
             for (var j = 0; j < genderRadioBtns.length; j++) {
                 genderRadioBtns[j].classList.remove("rdInvalid");
             }
-        }
-
-        if (!validator.isEmail(emailAddress.value)) {
-            emailAddress.classList.add("invalid");
-        } else {
-            emailAddress.classList.remove("invalid");
-        }
-
-        if (!validator.isPassword(password.value)) {
-            password.classList.add("invalid");
-        } else {
-            password.classList.remove("invalid");
         }
     });
 })();

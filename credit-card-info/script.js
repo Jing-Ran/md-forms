@@ -23,25 +23,22 @@
         return true;
     };
 
-    // Full name validation
-    validator.isName = function(name) {
-        var nameArr;
-        if (validator.isTrimmed(name)) {
-            nameArr = name.split(" ");
-            if (nameArr.length >= 2) {
-                for (var i = 0; i < nameArr.length; i++) {
-                    if (nameArr[i].length >= 2) {
-                        for (var j = 0; j < nameArr[i].length; j++){
-                            if (nameArr[i].charCodeAt(j) >= 48 &&
-                                nameArr[i].charCodeAt(j) <= 57)
-                                return false;
-                        }
-                    } else {
-                        return false;
+    // Cardholder's name validation
+    validator.isName = function(fullname) {
+        var nameArr = fullname.split(" ");
+        if (nameArr.length >= 2) {
+            for (var i = 0; i < nameArr.length; i++) {
+                if (nameArr[i].length >= 2) {
+                    for (var j = 0; j < nameArr[i].length; j++){
+                        if (nameArr[i].charCodeAt(j) >= 48 &&
+                            nameArr[i].charCodeAt(j) <= 57)
+                            return false;
                     }
+                } else {
+                    return false;
                 }
-                return true;
             }
+            return true;
         }
         return false;
     };
@@ -92,31 +89,43 @@
     };
 
 
+    holderName.addEventListener("keyup", function() {
+        if (!validator.isName(this.value)) {
+            this.setCustomValidity("Invalid cardholder's name");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        } 
+    });
+
+    cardNumber.addEventListener("keyup", function() {
+        if (!validator.isCreditCard(this.value)) {
+            this.setCustomValidity("Invalid card number");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
+    cvsCode.addEventListener("keyup", function() {
+        if (!validator.isCVS(this.value)) {
+            this.setCustomValidity("Invalid CVS code");
+            this.classList.add("invalid");
+        } else {
+            this.setCustomValidity("");
+            this.classList.remove("invalid");
+        }
+    });
+
     cardInfoForm.addEventListener("submit", function(e) {
         e.preventDefault();
-
-        if (!validator.isName(holderName.value)) {
-            holderName.classList.add("invalid");
-        } else {
-            holderName.classList.remove("invalid");
-        }
 
         if (!validator.isSelected(cardTypes)) {
             cardTypeBox.classList.add("invalid");
         } else {
             cardTypeBox.classList.remove("invalid");
-        }
-
-        if (!validator.isCreditCard(cardNumber.value)) {
-            cardNumber.classList.add("invalid");
-        } else {
-            cardNumber.classList.remove("invalid");
-        }
-
-        if (!validator.isCVS(cvsCode.value)) {
-            cvsCode.classList.add("invalid");
-        } else {
-            cvsCode.classList.remove("invalid");
         }
 
         if (!validator.isSelected(expireMonths)) {

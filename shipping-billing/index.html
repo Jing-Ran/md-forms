@@ -31,27 +31,27 @@
 		</table>
 	</div>
 
-	<form method="post" id="ship-bill">
+	<form method="post" id="ship-bill" autocomplete="off">
 		<div id="billing">
 			<fieldset name="billing">
 				<legend>Billing Address</legend>
 				<label for="fname" class="required">First Name: </label>
-				<input id="fname" type="text" name="firstn"><br>
+				<input class="name" id="fname" type="text" name="firstn" required><br>
 
 				<label for="lname" class="required">Last Name: </label>
-				<input id="lname" type="text" name="lastn" class="required"><br>
+				<input class="name" id="lname" type="text" name="lastn" required><br>
 
 				<label for="address1" class="required">Address 1: </label>
-				<input id="address1" type="text" name="address" placeholder="Street Address"><br>
+				<input class="address-rq"id="address1" type="text" name="address" placeholder="Street Address" required><br>
 
 				<label for="address2">Address 2: </label>
-				<input id="address2" type="text" name="address" placeholder="Apt, Suite, Bldg (optional)"><br>
+				<input class="address-op" id="address2" type="text" name="address" placeholder="Apt, Suite, Bldg (optional)"><br>
 
 				<label for="city" class="required">City: </label>
-				<input id="city" type="text" name="address"><br>
+				<input class="city-input" id="city" type="text" name="address" required><br>
 
 				<label for="state" class="required">State (in the US): </label>
-				<select id="state" name="states">
+				<select id="state" name="states" required>
 					<option value="" disabled selected>- Please select a state -</option>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
@@ -107,10 +107,10 @@
 				</select><br>
 
 				<label for="email" class="required">Email: </label>
-				<input id="email" type="email" name="email"><br>
+				<input class="email-input" id="email" type="email" name="email" required><br>
 
 				<label for="phone">Phone Number: </label>
-				<input id="phone" type="tel" name="usrtel" placeholder="XXX-XXX-XXXX"><br>
+				<input class="phone-input" id="phone" type="tel" name="usrtel" placeholder="XXX-XXX-XXXX"><br>
 			</fieldset>
 		</div>
 
@@ -120,22 +120,22 @@
 			<fieldset class="toggle-bd" name="shipping">
 				<legend>Shipping Address</legend>
 				<label for="sp-fname" class="required">First Name: </label>
-				<input id="sp-fname" type="text" name="firstn"><br>
+				<input class="name" id="sp-fname" type="text" name="firstn" required><br>
 
 				<label for="sp-lname" class="required">Last Name: </label>
-				<input id="sp-lname" type="text" name="lastn"><br>
+				<input class="name" id="sp-lname" type="text" name="lastn" required><br>
 
 				<label for="sp-address1" class="required">Address 1: </label>
-				<input id="sp-address1" type="text" name="address" placeholder="Street Address"><br>
+				<input class="address-rq" id="sp-address1" type="text" name="address" placeholder="Street Address" required><br>
 
 				<label for="sp-address2">Address 2: </label>
-				<input id="sp-address2" type="text" name="address" placeholder="Apt, Suite, Bldg (optional)"><br>
+				<input class="address-op" id="sp-address2" type="text" name="address" placeholder="Apt, Suite, Bldg (optional)"><br>
 
 				<label for="sp-city" class="required">City: </label>
-				<input id="sp-city" type="text" name="address"><br>
+				<input class="city-input" id="sp-city" type="text" name="address" required><br>
 
 				<label for="sp-state" class="required">State (in the US): </label>
-				<select id="sp-state" name="states">
+				<select id="sp-state" name="states" required>
 					<option value="" disabled selected>- Please select a state -</option>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
@@ -191,10 +191,10 @@
 				</select><br>
 
 				<label for="email" class="required">Email: </label>
-				<input id="sp-email" type="email" name="email"><br>
+				<input class="email-input" id="sp-email" type="email" name="email" required><br>
 
 				<label for="sp-phone">Phone Number: </label>
-				<input id="sp-phone" type="tel" name="usrtel" placeholder="XXX-XXX-XXXX">
+				<input class="phone-input" id="sp-phone" type="tel" name="usrtel" placeholder="XXX-XXX-XXXX">
 			</fieldset>
 		</div>	
 
