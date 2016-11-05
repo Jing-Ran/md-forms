@@ -4,19 +4,33 @@
 }
 
 .header {
-	position: absolute;
+	position: relative;
 	width: 100%;
-	top: 10px;
+  top: 10px;
 }
 
-table {
-	text-align: center;
+.nav-bar {
 	margin-left: auto;
 	margin-right: auto;
-	width: 60%;
+	width: 40%;
 }
 
-.step-bar {
+.nav-bar ul {
+  display: flex;
+  text-align: justify;
+  list-style: none;
+  width: 100%;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.nav-bar li {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+
+.step-num {
 	width: 25px;
 	height: 25px;
 	margin: 0 auto;
@@ -26,20 +40,13 @@ table {
 	vertical-align: middle;
 	font-size: 1.3em;
 	color: white;
+  text-align: center;
 }
 
-.steps {
-	width: 10%;
-	font-size: 0.8em;
+.step-tx {
+  text-transform: uppercase;
+	font-size: 0.7em;
 	font-family: 'Raleway', sans-serif;
-}
-
-.line {
-	width: 100px;
-	height: 1px;
-	background-color: rgb(224,80,56);
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .previous {
