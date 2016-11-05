@@ -86,7 +86,11 @@ input, select {
 	margin-bottom: 10px;
 	border: 1px solid #f0f0f0;
 	background-color: #f0f0f0;
-	transition: 1s;
+
+  -webkit-transition: border-color .5s, background-color .5s;
+  -moz-transition: border-color .5s, background-color .5s;
+  -o-transition: border-color .5s, background-color .5s;
+	transition: border-color .5s, background-color .5s;
 }
 
 fieldset input, select {
@@ -110,30 +114,22 @@ input:focus, select:focus {
 	border-color: #FFCCBC;
 }
 
-/*input[type="checkbox"] ~ div.shipping {*/
-	/*display: block;*/
-/*}*/
-
 input[type="checkbox"]:checked ~ div#shipping {
 	display: none;
 }
 
-input[type="submit"] {
+.btn-submit {
 	display: block;
 	float: right;
-	width: 20%;
-	height: 40px;
-	line-height: 25px;
+	padding: 10px 25px;
 	margin-top: 20px;
-	border: 1px solid #FF8A65;
+  border: none;
 	background-color: #FF8A65;
 	color: white;
 	font-size: 1em;
-	transition: 1s;
 }
 
-input[type="submit"]:hover {
-	border: 1px solid rgb(224,80,56);
+.btn-submit:hover {
 	background-color: rgb(224,80,56);
 }
 

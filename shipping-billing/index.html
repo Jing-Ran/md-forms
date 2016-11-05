@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Shipping-Billing Form</title>
-	<link rel="stylesheet" type="text/css" href="shipping-billing-form.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="header">
+	<header class="header">
 		<table>
 			<tr>
 				<td><div class="step-bar previous">1</div></td>
@@ -29,7 +29,7 @@
 				<td class="steps next-tx">Confirm</td>
 			</tr>
 		</table>
-	</div>
+	</header>
 
 	<form method="post" id="ship-bill" autocomplete="off">
 		<div id="billing">
@@ -198,7 +198,7 @@
 			</fieldset>
 		</div>	
 
-		<input type="submit" name="submit" value="Next Step">
+		<input type="submit" name="submit" value="Next Step" class="btn-submit">
 	</form>
 
 	<script src="script.js"></script>
