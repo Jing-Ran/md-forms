@@ -9,27 +9,26 @@
 </head>
 <body>
 	<header class="header">
-		<table>
-			<tr>
-				<td><div class="step-bar previous">1</div></td>
-				<td><div class="line previous"></div></td>
-				<td><div class="step-bar previous ">2</div></td>
-				<td><div class="line previous"></div></td>
-				<td><div class="step-bar">3</div></td>
-				<td><div class="line next"></div></td>
-				<td><div class="step-bar next">4</div></td>
-			</tr>
-
-			<tr>
-				<td class="steps previous">Shopping</td>
-				<td></td>
-				<td class="steps previous">Address</td>
-				<td></td>
-				<td class="steps">Payment</td>
-				<td></td>
-				<td class="steps next-tx">Confirm</td>
-			</tr>
-		</table>
+    <nav class="nav-bar">
+      <ul class="nav-bar-first">
+        <li class="previous">
+          <p class="step-num">1</p>
+          <p class="step-tx">shopping</p>
+        </li>
+        <li class="previous">
+          <p class="step-num">2</p>
+          <p class="step-tx">address</p>
+        </li>
+        <li>
+          <p class="step-num">3</p>
+          <p class="step-tx">payment</p>
+        </li>
+        <li>
+          <p class="step-num next">4</p>
+          <p class="step-tx next-tx">confirm</p>
+        </li>
+      </ul>
+    </nav>
 	</header>
 
 	<form method="post" id="card-info">
