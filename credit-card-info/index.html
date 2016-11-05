@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Payment Form</title>
-	<link rel="stylesheet" type="text/css" href="../shipping-billing/shipping-billing-form.css">
-	<link rel="stylesheet" type="text/css" href="card-info-form.css">
+	<link rel="stylesheet" type="text/css" href="../shipping-billing/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="header">
+	<header class="header">
 		<table>
 			<tr>
 				<td><div class="step-bar previous">1</div></td>
@@ -21,26 +21,26 @@
 			</tr>
 
 			<tr>
-				<td class="steps previous-tx">Shopping</td>
+				<td class="steps previous">Shopping</td>
 				<td></td>
-				<td class="steps previous-tx">Address</td>
+				<td class="steps previous">Address</td>
 				<td></td>
 				<td class="steps">Payment</td>
 				<td></td>
 				<td class="steps next-tx">Confirm</td>
 			</tr>
 		</table>
-	</div>
+	</header>
 
 	<form method="post" id="card-info">
 		<div class="payment">
 			<fieldset name="payment">
 				<legend>Payment Information</legend>
-				<label for="holder">Cardholder's Name: </label>
+				<label for="holder" class="required">Cardholder's Name: </label>
 				<input id="holder" type="text" name="holdernm" required><br>
 
-				<label for="card-type">Card Type: </label>
-				<select id="card-type" name="card-tp">
+				<label for="card-type" class="required">Card Type: </label>
+				<select id="card-type" name="card-tp" required>
 					<option value="" disabled selected>- Select -</option>
 					<option value="visa">Visa</option>
 					<option value="master">MasterCard</option>
@@ -49,18 +49,18 @@
 				</select>
 				<img class="cards" src="https://irp-cdn.multiscreensite.com/777e30de/dms3rep/multi/tablet/VISA-MasterCard-American-Express-and-Discover-credit-Cards_1mKNqQCSeaNEfKGle5yV-1000x177.png" alt="card types"><br>
 
-				<label for="card-no">Card Number: </label>
+				<label for="card-no" class="required">Card Number: </label>
 				<input id="card-no" type="text" name="card-no" pattern=".{16}|.{19}" required><br>
 
-				<label for="cvs">CVS Code: </label>
+				<label for="cvs" class="required">CVS Code: </label>
 				<input id="cvs" type="text" name="cvs" pattern=".{3}|.{4}" required>
-				<a class="cvs">What is cvs code?</a><br>
-				<div class="cvs-code">
+				<p class="cvs">What is cvs code?</p>
+				<div class="cvs-eg">
 					<img src="https://www.joycemeyer.org/Assets/images/checkout/cvvImage.jpg" alt="cvs code">
 				</div>
 
-				<label>Expiration Date: </label>
-				<select id="exp-m" class="expiration" name="exp-m">
+				<label class="required">Expiration Date: </label>
+				<select id="exp-m" class="expiration" name="exp-m" required>
 					<option value="" disabled selected>- Month -</option>
 					<option value="jan">01</option>
 					<option value="feb">02</option>
@@ -74,8 +74,8 @@
 					<option value="oct">10</option>
 					<option value="nov">11</option>
 					<option value="dec">12</option>
-				</select> / 
-				<select id="exp-y" class="expiration" name="exp-y">
+				</select>
+				<select id="exp-y" class="expiration" name="exp-y" required>
 					<option value="" disabled selected>- Year -</option>
 					<option value="2016">16</option>
 					<option value="2017">17</option>
@@ -96,7 +96,7 @@
 			</fieldset>
 		</div>
 
-		<input type="submit" name="submit" value="Next Step">
+		<input type="submit" name="submit" value="Next Step" class="btn-submit">
 	</form>
 	
 	<script src="script.js"></script>

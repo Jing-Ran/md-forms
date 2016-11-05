@@ -2,7 +2,8 @@ form {
 	width: 50%;
 }
 
-fieldset input, select {
+fieldset input:not(.btn-submit),
+fieldset select {
 	width: 40%;
 }
 
@@ -24,17 +25,22 @@ img.cards {
 	cursor: pointer;
 }
 
-div.cvs-code {
-	display: none;
+div.cvs-eg {
 	position: absolute;
 	top: 18%;
 	right: 13%;
 	width: 15%;
 	height: 30%;
+  opacity: 0;
+
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	transition: opacity 0.5s;
 }
 
-.cvs:hover ~ .cvs-code{
-	display: block;
+.cvs:hover + .cvs-eg{
+  opacity: 1;
 }
 
 select.expiration {
