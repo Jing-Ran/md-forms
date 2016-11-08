@@ -3,7 +3,7 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-*:focus {
+* {
 	outline: none;
 }
 
@@ -64,7 +64,6 @@ body {
 	font-size: inherit;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	appearance: none;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	padding: 10px 10px;
