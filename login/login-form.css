@@ -54,11 +54,16 @@ a {
 	background-position: 15px center;
 	background-repeat: no-repeat;
 	font-size: inherit;
+  outline: none;
+
+  -webkit-transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
 input:focus {
 	background-color: #c0dfd9;
-	outline: none;
 }
 
 #email-login {
@@ -99,6 +104,12 @@ input:focus {
 	background-color: #c0dfd9;
 	color: #5e0231;
 	font-size: inherit;
+	outline: none;
+
+  -webkit-transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
 .btn:hover {
@@ -107,7 +118,6 @@ input:focus {
 
 .btn:active {
 	background-color: #c0dfd9;
-	font-weight: bolder;
 }
 
 input.invalid {
