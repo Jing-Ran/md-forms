@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Signup Form</title>
-	<link rel="stylesheet" type="text/css" href="signup-form.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -23,12 +23,14 @@
 
 				<div class="question">
 					<label for="dob" class="required">Date of Birth</label><br>
-					<input id="dob" class="full-width" type="text" name="dob" placeholder="mm/dd/yyyy" required>
+					<input id="dob" class="full-width" type="text" name="dob"
+                 placeholder="mm/dd/yyyy" required>
 				</div>
 
 				<div class="question">
 					<label for="email" class="required">Email Address</label><br>
-					<input id="email" class="full-width" type="email" name="email" required>
+					<input id="email" class="full-width" type="email" name="email"
+								 placeholder="email@example.com" required>
 				</div>
 			</div>
 
@@ -55,8 +57,8 @@
 				</div>
 			</div>
 			
-			<div class="submit-btn">
-				<input type="submit" name="submit" value="Sign Up">
+			<div class="btn-wrapper">
+				<input type="submit" name="submit" value="Sign Up" class="btn-submit">
 			</div>
 		</form>
 	</div>

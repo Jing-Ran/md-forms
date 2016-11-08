@@ -63,6 +63,11 @@ form {
 	padding: 5px 15px;
 	border: 1px solid #9ad3de;
 	color: #795548;
+
+  -webkit-transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
 .full-width {
@@ -70,13 +75,8 @@ form {
 	border-radius: 60px;
 }
 
-.short-text {
-	width: 25%;
-	border-radius: 60px;
-	margin-left: 10px;
-}
-
-input:focus, select:focus {
+input:focus,
+select:focus {
 	background-color: #9ad3de;
 	outline: none;
 }
@@ -85,11 +85,8 @@ select {
 	width: 20%;
 	background-color: white;
 	-webkit-appearance: none;
-   	-moz-appearance: none;
-   	appearance: none;
-   	border-radius: 60px;
-   	-webkit-border-radius: 60px;
-   	-moz-border-radius: 60px;
+	-moz-appearance: none;
+	border-radius: 60px;
 }
 
 ::-webkit-input-placeholder {
@@ -108,11 +105,11 @@ select {
 	color: rgba(121,85,72,0.6);
 }
 
-.submit-btn {
+.btn-wrapper {
 	clear: both;
 }
 
-input[type="submit"] {
+.btn-submit {
 	padding: 5px 10px;
 	width: 100px;
 	line-height: 25px;
@@ -120,21 +117,23 @@ input[type="submit"] {
 	border-radius: 60px;
 	border: 2px solid #9ad3de;
 	color: #795548;
+
+  -webkit-transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
-input[type="submit"]:hover {
+.btn-submit:hover {
 	background-color: white;
-	border: 2px solid #9ad3de;
 }
 
-input[type="submit"]:active {
+.btn-submit:active {
 	background-color: #9ad3de;
-	font-weight: bolder;
 }
 
 input.invalid {
 	border-color: red;
-	background-color: white;
 }
 
 input.invalid:focus {
