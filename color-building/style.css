@@ -173,6 +173,7 @@ input[id="bar-alpha"]::-webkit-slider-thumb {
 }
 
 .result {
+  outline: none;
   width: 70%;
   height: 100px;
   resize: none;
