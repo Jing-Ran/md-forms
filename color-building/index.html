@@ -3,50 +3,66 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Color Building Form</title>
-	<link rel="stylesheet" type="text/css" href="color-building-form.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="frame">
-		<div class="header">
-			<img src="http://athome.kimvallee.com/wp-content/uploads/2012/01/MiddleHumidifier__Colours_010912.jpg" alt="colors">
-		</div>
+	<div class="container">
+		<header>
+      <h1>Color Builder</h1>
+		</header>
 
-		<h1>Build Your Own Colors</h1>
-		
-		<div class="color-bar">
-			<form method="post">
-				<table>
-					<tr>
-						<td class="left red">RED</td>
-						<td class="right"><span class="sm-text">0 </span><input type="range" name="red-color" min="0" max="255" step="5" value="0"><span class="sm-text"> 255</span></td>
-					</tr>
+    <div class="line-multi-color">
+      <ul>
+        <li class="red"></li>
+        <li class="green"></li>
+        <li class="blue"></li>
+        <li class="red"></li>
+        <li class="green"></li>
+        <li class="blue"></li>
+      </ul>
+    </div>
 
-					<tr>
-						<td class="left green">GREEN</td>
-						<td class="right"><span class="sm-text">0 </span><input type="range" name="green-color" min="0" max="255" step="5" value="0"><span class="sm-text"> 255</span></td>
-					</tr>
+    <form class="color-bars">
+      <div class="container-red">
+        <label for="bar-red" class="label-red">R</label>
+        <span class="sm-text">0</span>
+        <input id="bar-red" type="range" name="color-red" min="0" max="255"
+               step="5" value="0">
+        <span class="sm-text">255</span>
+      </div>
 
-					<tr>
-						<td class="left blue">BLUE</td>
-						<td class="right"><span class="sm-text">0 </span><input type="range" name="blue-color" min="0" max="255" step="5" value="0"><span class="sm-text"> 255</span></td>
-					</tr>
+      <div class="container-green">
+        <label for="bar-green" class="label-green">G</label>
+        <span class="sm-text">0</span>
+        <input id="bar-green" type="range" name="color-green" min="0" max="255"
+               step="5" value="0">
+        <span class="sm-text">255</span>
+      </div>
 
-					<tr>
-						<td class="left transparency">TRANSPARENCY</td>
-						<td class="right"><span class="sm-text">0 </span><input type="range" name="transparency-color" min="0" max="1" step="0.01" value="0"><span class="sm-text"> 1</span></td>
-					</tr>
+      <div class="container-blue">
+        <label for="bar-blue" class="label-blue">B</label>
+        <span class="sm-text">0</span>
+        <input id="bar-blue" type="range" name="color-blue" min="0" max="255"
+               step="5" value="0">
+        <span class="sm-text">255</span>
+      </div>
 
-					<tr>
-						<td colspan="2"><input type="submit" name="submit" value="Check out your color"></td>
-					</tr>
+      <div class="container-alpha">
+        <label for="bar-alpha" class="label-alpha">A</label>
+        <span class="sm-text">0</span>
+        <input id="bar-alpha" type="range" name="color-alpha" min="0" max="1"
+               step="0.01" value="1">
+        <span class="sm-text">1</span>
+      </div>
 
-					<tr>
-						<td colspan="2"><textarea name="color-built">Your color</textarea></td>
-					</tr>
-				</table>
-			</form>
-		</div>
+      <div class="result-container">
+        <textarea class="result" name="color-result"
+                  readonly style="background-color: black">rgba(0,0,0,1)</textarea>
+      </div>
+    </form>
 	</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
