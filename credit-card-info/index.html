@@ -36,7 +36,7 @@
 			<fieldset name="payment">
 				<legend>Payment Information</legend>
 				<label for="holder" class="required">Cardholder's Name: </label>
-				<input id="holder" type="text" name="holdernm" required><br>
+				<input id="holder" type="text" name="holdernm" placeholder="John Doe" required><br>
 
 				<label for="card-type" class="required">Card Type: </label>
 				<select id="card-type" name="card-tp" required>
@@ -49,7 +49,7 @@
 				<img class="cards" src="https://irp-cdn.multiscreensite.com/777e30de/dms3rep/multi/tablet/VISA-MasterCard-American-Express-and-Discover-credit-Cards_1mKNqQCSeaNEfKGle5yV-1000x177.png" alt="card types"><br>
 
 				<label for="card-no" class="required">Card Number: </label>
-				<input id="card-no" type="text" name="card-no" pattern=".{16}|.{19}" required><br>
+				<input id="card-no" type="text" name="card-no" pattern=".{16}|.{19}" placeholder="1111-1111-1111-1111" required><br>
 
 				<label for="cvs" class="required">CVS Code: </label>
 				<input id="cvs" type="text" name="cvs" pattern=".{3}|.{4}" required>
